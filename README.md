@@ -55,3 +55,15 @@ Test: "It correctly works with 'u' at the beginning"
 Code: convertToPigLatin('under')
 Expected Output: 'underway'
 ```
+
+```
+Test: "It correctly works with a single consonant at the beginning"
+Code: convertToPigLatin('count')
+Expected Output: 'ountcay'
+```
+
+```
+Test: "It correctly works with a different single consonant at the beginning"
+Code: convertToPigLatin('balloon')
+Expected Output: 'balloonbay'
+```

@@ -49,6 +49,7 @@ const tests = [
 
     logResult(actual, expected)
   },
+
   function () {
     logDescription('It correctly works with "o" at the beginning')
 
@@ -57,11 +58,39 @@ const tests = [
 
     logResult(actual, expected)
   },
+
   function () {
     logDescription('It correctly works with "u" at the beginning')
 
     const actual = convertToPigLatin('under')
     const expected = 'underway'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('It correctly works with a single consonant at the beginning')
+
+    const actual = convertToPigLatin('count')
+    const expected = 'ountcay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('It correctly works with a different single consonant at the beginning')
+
+    const actual = convertToPigLatin('balloon')
+    const expected = 'alloonbay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('It correctly works with a multiple consonants at the beginning')
+
+    const actual = convertToPigLatin('grape')
+    const expected = 'apegray'
 
     logResult(actual, expected)
   },
