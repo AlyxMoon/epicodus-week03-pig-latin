@@ -15,6 +15,15 @@ function logResult (actual, expected) {
 
 const tests = [
   function () {
+    logDescription('Returns a blank string if a blank string is provided')
+
+    const actual = convertToPigLatin('')
+    const expected = ''
+
+    logResult(actual, expected)
+  },
+
+  function () {
     logDescription('It correctly works with "a" at the beginning')
 
     const actual = convertToPigLatin('away')

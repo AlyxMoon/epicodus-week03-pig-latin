@@ -20,6 +20,11 @@ Pig Latin Rules:
 ## Tests
 
 ### Describe: convertToPigLatin();
+```
+Test: "Returns a blank string if a blank string is provided"
+Code: convertToPigLatin('')
+Expected Output: ''
+```
 
 ```
 Test: "It correctly works with 'a' at the beginning"
