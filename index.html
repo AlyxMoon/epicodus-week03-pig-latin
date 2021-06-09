@@ -9,18 +9,19 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <script src="js/scripts-logic.js"></script>
-  <script src="js/scripts-test.js"></script>
-  <script src="js/scripts-ui.js"></script>
+  <script src="js/scripts-logic.js" defer></script>
+  <script src="js/scripts-test.js" defer></script>
+  <script src="js/scripts-ui.js" defer></script>
 
   <title>Pig Latin</title>
 </head>
-<body>
+<body class="my-4">
   <header class="container text-center">
     <h1>Pig Latin Conversion</h1>
   </header>
+  
   <main class="container">
-    <div class="row">
+    <section class="row">
 
       <div class="col">
         
@@ -53,8 +54,18 @@
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
+    <section class="row mt-5">
+      <header class="col-12 text-center">
+        <h2>Tests</h2>
+      </header>
+
+      <ul 
+        id="output-tests"
+        class="list-group"
+      ></ul>
+    </section>
   </main>
 </body>
 </html>

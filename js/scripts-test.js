@@ -1,5 +1,11 @@
 function logDescription (description) {
   console.log(`%c ${description}`, 'font-weight: bold;')
+
+  $('#output-tests li:last-child')
+    .addClass('text-light')
+    .append(`
+    <h6 class="font-bold">${description}</h6>
+  `)
 }
 
 function logResult (actual, expected) {
@@ -8,14 +14,22 @@ function logResult (actual, expected) {
       `%c -- Incorrect | actual: ${actual} | expected: ${expected}`,
       'background-color: #290000',
     )
+
+    $('#output-tests li:last-child')
+      .addClass('bg-danger')
+      .append(`
+      <p>Incorrect | actual: ${actual} | expected: ${expected}</p>
+    `)
   } else {
     console.log('%c -- passed!', 'background-color: green')
+
+    $('#output-tests li:last-child').addClass('bg-success')
   }
 }
 
 const tests = [
   function () {
-    logDescription('Returns a blank string if a blank string is provided')
+    logDescription('convertToPigLatin(): Returns a blank string if a blank string is provided')
 
     const actual = convertToPigLatin('')
     const expected = ''
@@ -24,7 +38,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with "a" at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with "a" at the beginning')
 
     const actual = convertToPigLatin('away')
     const expected = 'awayway'
@@ -33,7 +47,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with "e" at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with "e" at the beginning')
 
     const actual = convertToPigLatin('energy')
     const expected = 'energyway'
@@ -42,7 +56,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with "i" at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with "i" at the beginning')
 
     const actual = convertToPigLatin('in')
     const expected = 'inway'
@@ -51,7 +65,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with "o" at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with "o" at the beginning')
 
     const actual = convertToPigLatin('out')
     const expected = 'outway'
@@ -60,7 +74,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with "u" at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with "u" at the beginning')
 
     const actual = convertToPigLatin('under')
     const expected = 'underway'
@@ -69,7 +83,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with a single consonant at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with a single consonant at the beginning')
 
     const actual = convertToPigLatin('count')
     const expected = 'ountcay'
@@ -78,7 +92,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with a different single consonant at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with a different single consonant at the beginning')
 
     const actual = convertToPigLatin('balloon')
     const expected = 'alloonbay'
@@ -87,7 +101,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with a multiple consonants at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with a multiple consonants at the beginning')
 
     const actual = convertToPigLatin('plot')
     const expected = 'otplay'
@@ -96,7 +110,7 @@ const tests = [
   },
 
   function () {
-    logDescription('It correctly works with "qu" at the beginning')
+    logDescription('convertToPigLatin(): It correctly works with "qu" at the beginning')
 
     const actual = convertToPigLatin('queen')
     const expected = 'eenquay'
@@ -178,7 +192,13 @@ const tests = [
 ]
 
 function runTests () {
-  tests.forEach(test => test())
+  tests.forEach(test => {
+    $('#output-tests').append(`
+      <li class="list-group-item" />
+    `)
+
+    test()
+  })
 }
 
 runTests()
