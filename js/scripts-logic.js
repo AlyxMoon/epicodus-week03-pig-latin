@@ -1,21 +1,31 @@
 
-function convertToPigLatin (text) {
-  if (/^[aeiou]/.test(text)) {
-    return `${text}way`
+
+function convertToPigLatin (word) {
+  if (/^[aeiou]/.test(word)) {
+    return `${word}way`
   }
 
-  if (text.startsWith('qu')) {
-    return `${text.slice(2)}quay`
+  if (word.startsWith('qu')) {
+    return `${word.slice(2)}quay`
   }
 
-  const beginningConsonant = text.match(/^[^aeiou]+/)
+  const beginningConsonant = word.match(/^[^aeiou]+/)
 
   if (beginningConsonant) {
     return '' +
-      text.slice(beginningConsonant[0].length) +
+      word.slice(beginningConsonant[0].length) +
       beginningConsonant.join('') +
       'ay'
   }
 
-  return text
+  return word
+}
+
+function convertToPigLatinMultiple (sentence) {
+  sentence = sentence.trim().replace(/ +/g, ' ')
+
+  return sentence
+    .split(' ')
+    .map(convertToPigLatin)
+    .join(' ')
 }
