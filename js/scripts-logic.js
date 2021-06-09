@@ -1,6 +1,8 @@
 
 
 function convertToPigLatin (word) {
+  word = word.replace(/[^a-zA-Z]/g, '')
+
   if (/^[aeiou]/.test(word)) {
     return `${word}way`
   }

@@ -80,6 +80,18 @@ Code: convertToPigLatin('queen')
 Expected Output: 'eenquay'
 ```
 
+```
+Test: "It should ignore any numbers"
+Code: convertToPigLatin('he42llo')
+Expected Output: 'ellohay'
+```
+
+```
+Test: "It should ignore non-characters such as periods"
+Code: convertToPigLatin('he.l,l!o')
+Expected Output: 'ellohay'
+```
+
 #### Describe: convertToPigLatinMultiple()
 
 ```

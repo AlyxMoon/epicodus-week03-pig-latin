@@ -105,6 +105,24 @@ const tests = [
   },
 
   function () {
+    logDescription('convertToPigLatin(): It should ignore any numbers')
+
+    const actual = convertToPigLatin('he42llo')
+    const expected = 'ellohay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('convertToPigLatin(): It should ignore non-characters such as periods')
+
+    const actual = convertToPigLatin('he.l,l!o')
+    const expected = 'ellohay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
     logDescription('convertToPigLatinMultiple(): It returns correctly with a single word')
 
     const actual = convertToPigLatinMultiple('hello')
