@@ -67,3 +67,9 @@ Test: "It correctly works with a different single consonant at the beginning"
 Code: convertToPigLatin('balloon')
 Expected Output: 'balloonbay'
 ```
+
+```
+Test: "It correctly works with a multiple consonants at the beginning"
+Code: convertToPigLatin('plot')
+Expected Output: 'otplay'
+```

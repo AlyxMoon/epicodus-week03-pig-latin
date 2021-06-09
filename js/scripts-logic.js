@@ -11,7 +11,7 @@ function convertToPigLatin (text) {
 
   if (beginningConsonant) {
     return '' +
-      text.slice(beginningConsonant.length) +
+      text.slice(beginningConsonant[0].length) +
       beginningConsonant.join('') +
       'ay'
   }

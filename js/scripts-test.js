@@ -89,8 +89,8 @@ const tests = [
   function () {
     logDescription('It correctly works with a multiple consonants at the beginning')
 
-    const actual = convertToPigLatin('grape')
-    const expected = 'apegray'
+    const actual = convertToPigLatin('plot')
+    const expected = 'otplay'
 
     logResult(actual, expected)
   },
