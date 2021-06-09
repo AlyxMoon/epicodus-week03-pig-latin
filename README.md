@@ -79,3 +79,17 @@ Test: "It correctly works with 'qu' at the beginning"
 Code: convertToPigLatin('queen')
 Expected Output: 'eenquay'
 ```
+
+#### Describe: convertToPigLatinMultiple()
+
+```
+Test: "It returns correctly with a single word"
+Code: convertToPigLatinMultiple('hello')
+Expected Output: 'ellohay'
+```
+
+```
+Test: "It returns correctly with multiple words"
+Code: convertToPigLatinMultiple('hello there apple')
+Expected Output: 'ellohay erethay appleway'
+```

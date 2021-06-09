@@ -103,6 +103,24 @@ const tests = [
 
     logResult(actual, expected)
   },
+
+  function () {
+    logDescription('convertToPigLatinMultiple(): It returns correctly with a single word')
+
+    const actual = convertToPigLatinMultiple('hello')
+    const expected = 'ellohay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('convertToPigLatinMultiple(): It returns correctly with multiple words')
+
+    const actual = convertToPigLatinMultiple('hello there apple')
+    const expected = 'ellohay erethay appleway'
+
+    logResult(actual, expected)
+  },
 ]
 
 function runTests () {
