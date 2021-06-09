@@ -1,7 +1,9 @@
 
 
 function convertToPigLatin (word) {
-  word = word.replace(/[^a-zA-Z]/g, '')
+  word = word
+    .toLowerCase()
+    .replace(/[^a-z]/g, '')
 
   if (/^[aeiou]/.test(word)) {
     return `${word}way`

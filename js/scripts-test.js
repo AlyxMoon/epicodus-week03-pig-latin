@@ -105,6 +105,42 @@ const tests = [
   },
 
   function () {
+    logDescription('convertToPigLatin(): It should convert everything to lowercase')
+
+    const actual = convertToPigLatin('aPPLe')
+    const expected = 'appleway'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('convertToPigLatin(): It should work when vowels are capitalized')
+
+    const actual = convertToPigLatin('Array')
+    const expected = 'arrayway'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('convertToPigLatin(): It should work when consonants are capitalized')
+
+    const actual = convertToPigLatin('PHone')
+    const expected = 'onephay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
+    logDescription('convertToPigLatin(): It should work when "qu" are capitalized')
+
+    const actual = convertToPigLatin('QUeen')
+    const expected = 'eenquay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
     logDescription('convertToPigLatin(): It should ignore any numbers')
 
     const actual = convertToPigLatin('he42llo')

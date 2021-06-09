@@ -81,6 +81,30 @@ Expected Output: 'eenquay'
 ```
 
 ```
+Test: "It should convert everything to lowercase"
+Code: convertToPigLatin('aPPLe')
+Expected Output: 'appleway'
+```
+
+```
+Test: "It should work when vowels are capitalized"
+Code: convertToPigLatin('Array')
+Expected Output: 'arrayway'
+```
+
+```
+Test: "It should work when consonants are capitalized"
+Code: convertToPigLatin('PHone')
+Expected Output: 'onephay'
+```
+
+```
+Test: "It should work when 'qu' are capitalized"
+Code: convertToPigLatin('QUeen')
+Expected Output: 'eenquay'
+```
+
+```
 Test: "It should ignore any numbers"
 Code: convertToPigLatin('he42llo')
 Expected Output: 'ellohay'
