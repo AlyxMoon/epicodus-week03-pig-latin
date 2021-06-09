@@ -73,3 +73,9 @@ Test: "It correctly works with a multiple consonants at the beginning"
 Code: convertToPigLatin('plot')
 Expected Output: 'otplay'
 ```
+
+```
+Test: "It correctly works with 'qu' at the beginning"
+Code: convertToPigLatin('queen')
+Expected Output: 'eenquay'
+```

@@ -94,6 +94,15 @@ const tests = [
 
     logResult(actual, expected)
   },
+
+  function () {
+    logDescription('It correctly works with "qu" at the beginning')
+
+    const actual = convertToPigLatin('queen')
+    const expected = 'eenquay'
+
+    logResult(actual, expected)
+  },
 ]
 
 function runTests () {

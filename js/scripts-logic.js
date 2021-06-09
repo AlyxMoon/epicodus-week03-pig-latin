@@ -7,6 +7,10 @@ function convertToPigLatin (text) {
     return `${text}way`
   }
 
+  if (text.startsWith('qu')) {
+    return `${text.slice(2)}quay`
+  }
+
   const beginningConsonant = text.match(/^[^aeiou]+/)
 
   if (beginningConsonant) {
