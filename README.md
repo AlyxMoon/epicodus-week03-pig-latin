@@ -1,4 +1,4 @@
-# Epicodus | Week 03 | Vowel Counter
+# Epicodus | Week 03 | Pig Latin
 
 > Write a Pig Latin translator or should we say an "igPay atinLay anslatorTray"?
 
