@@ -119,6 +119,15 @@ const tests = [
   },
 
   function () {
+    logDescription('convertToPigLatin(): It should ignore "qu" when checking consonants in the beginning')
+
+    const actual = convertToPigLatin('squeak')
+    const expected = 'queaksay'
+
+    logResult(actual, expected)
+  },
+
+  function () {
     logDescription('convertToPigLatin(): It should convert everything to lowercase')
 
     const actual = convertToPigLatin('aPPLe')

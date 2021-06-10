@@ -13,12 +13,21 @@ function convertToPigLatin (word) {
     return `${word.slice(2)}quay`
   }
 
-  const beginningConsonant = word.match(/^[^aeiou]+/)
+  let beginningConsonant = word.match(/^[^aeiou]+/) || []
+  beginningConsonant = beginningConsonant[0] || ''
+  beginningConsonant = beginningConsonant.replace(/qu$/, '')
 
   if (beginningConsonant) {
+    if (
+      beginningConsonant[beginningConsonant.length - 1] === 'q' &&
+      word[beginningConsonant.length] === 'u'
+    ) {
+      beginningConsonant = beginningConsonant.slice(0, -1)
+    }
+
     return '' +
-      word.slice(beginningConsonant[0].length) +
-      beginningConsonant.join('') +
+      word.slice(beginningConsonant.length) +
+      beginningConsonant +
       'ay'
   }
 

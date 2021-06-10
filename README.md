@@ -81,6 +81,12 @@ Expected Output: 'eenquay'
 ```
 
 ```
+Test: "It should ignore 'qu' when checking consonants in the beginning"
+Code: convertToPigLatin('squeak')
+Expected Output: 'queaksay'
+```
+
+```
 Test: "It should convert everything to lowercase"
 Code: convertToPigLatin('aPPLe')
 Expected Output: 'appleway'
